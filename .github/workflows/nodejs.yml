@@ -10,6 +10,8 @@ env:
   CI: true
 
 jobs:
+    # build – произвольно выбранное имя задания
+    # их может быть больше одного
   build:
 
     # The type of machine to run the job on
@@ -23,6 +25,9 @@ jobs:
     steps:
         # Check-out repository under GitHub workspace
         # https://github.com/actions/checkout
+
+        # экшен — выполняет какую-то задачу
+        # checkout — клонирует репозиторий
       - uses: actions/checkout@v4
         # Step's name
       - name: Use Node.js ${{ matrix.node-version }}
